@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./lib/css/styles.css">
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <header class="header">
+      <div>
+        <h1>COVID-19 Vaccine Trials Volunteer Search Tool</h1>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="big-card">
+        <div class="card">
+          <div class="title">ZipCode</div>
+        <span><input class="annotation-box" id="zipcode"></span>
+        <div class="title" style="margin-top: 50px">OR State</div>
+        <span><input class="annotation-box" id="state"></span>
+          <div class="title" style="margin-top: 50px">
+            Minimum Age
+          </div>
+        <span><input class="annotation-box" id="minimumage"></span>
+          <div class="title" style="margin-top: 50px">
+            Maximum Age
+          </div>
+        <span><input class="annotation-box" id="maximumage"></span>
+        <div class="title" style="margin-top: 50px">
+            Comorbidities
+          </div>
+        <li>
+          <label for="diabetes" style="word-wrap:break-word">
+          <input id="diabetes" type="checkbox" value="diabetes"/>Diabetes
+          </label>
+          <label for="hypertension" style="word-wrap:break-word">
+          <input id="hypertension" type="checkbox" value="hypertension"/>Hypertension
+          </label>
+          <label for="obesity" style="word-wrap:break-word">
+          <input id="obesity" type="checkbox" value="obesity"/>Obesity
+          </label>
+          <label for="cardio" style="word-wrap:break-word">
+          <input id="cardio" type="checkbox" value="cardio"/>Cardiovascular Diseases
+          </label>
+          <label for="lung" style="word-wrap:break-word">
+          <input id="lung" type="checkbox" value="lung"/>Lung Diseases
+          </label>
+        </li>
+        <div class="title" style="margin-top: 30px">
+          Others
+        </div>
+        <li>
+          <label for="smoking" style="word-wrap:break-word">
+          <input id="smoking" type="checkbox" value="smoking"/>Smoking
+          </label>
+          <label for="pregnancy" style="word-wrap:break-word">
+          <input id="pregnancy" type="checkbox" value="pregnancy"/>Pregnancy
+          </label>
+        </li>
+        <button class="annotation-button" id="add" style="margin-top: 30px">Find Volunteers</button>
+        </div>
+
+        <div class="card">
+          <div class="title">
+            List of Patients Qualified for COVID-19 Vaccine Trial
+          </div>
+          <ul id="med_list"></ul>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src='./lib/js/fhir-client.js'></script>
+  <script src="./lib/js/get-data.js"></script>
+
+  <!-- uncomment below script and comment above script to switch for easy local testing -->
+  <!-- <script src="./lib/js/get-data-test.js"></script> -->
+</body>
+
+</html>
